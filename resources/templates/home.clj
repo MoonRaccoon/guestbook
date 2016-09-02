@@ -1,12 +1,14 @@
 (ns templates.home
   (require [hiccup.core :as h]
            [hiccup.page :as hp]
-           [templates.base :as b]))
+           [templates.base :as b]
+           [ring.util.anti-forgery :as af]))
 
 (defn home-render [m]
   [:html
    (b/base-head)
    [:body
+    [:h2 "Welcome to Guestbook!"]
     [:div {:xmlns "http://www.w3.org/1999/html", :class "row"}
      [:div {:class "span12"}
       [:ul {:class "content"}
@@ -18,7 +20,7 @@
      [:div {:class "span12"}
       [:form {:method "POST" :action "/message"}
        [:div {:class "form-group"}
-        (anti-forgery-field)
+        (af/anti-forgery-field)
         [:p
          "Name:"
          [:input {:class "form-control" :type "text" :name "name"

@@ -7,7 +7,6 @@
    [:meta {:content "text/html; charset=UTF-8", :http-equiv "Content-Type"}]
    [:meta {:content "width=device-width, initial-scale=1", :name "viewport"}]
    [:title "Welcome to guestbook"]
-   [:h2 "Welcome to Guestbook!"]
    (hp/include-css "/css/screen.css"
                    "/assets/bootstrap/css/bootstrap.min.css"
                    "/assets/font-awesome/css/font-awesome.min.css")

@@ -17,8 +17,6 @@
 (defn home-page []
   (h/html (home/home-render (d/get-messages))))
 
-(h/html (home/home-render (d/get-messages)))
-
 (defn about-page []
   (layout/render "about.html"))
 
