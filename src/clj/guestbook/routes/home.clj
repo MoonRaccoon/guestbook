@@ -14,8 +14,9 @@
                      "home.html"
                      {:messages (d/get-messages)}))
 
-(defn home-page []
-  (h/html (home/home-render (d/get-messages))))
+(defn home-page [] (layout/render
+                     "home.html"
+                     {:messages (d/get-messages)}))
 
 (defn about-page []
   (layout/render "about.html"))
